@@ -1,0 +1,48 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  background-color: $primary-bg;
+  color: $primary-text;
+}
+
+.navbar-brand img {
+  height: 35px;
+  width: auto;
+}
+
+.not-active {
+  color: $not-active-text;
+}
+
+.user-image {
+  height: 20px;
+  width: auto;
+}
+
+.story {
+  width: 60px;
+  height: 60px;
+  padding: 2px;
+  margin-right: 10px;
+  background-image: $gradient-border;
+  border-radius: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 58px;
+    height: 58px;
+    border-radius: 5px;
+  }
+}
+
+// To hide the scrollbar
+.slider-section .d-flex.overflow-auto::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-section .d-flex.overflow-auto {
+  scrollbar-width: none; /* Firefox */
+}
