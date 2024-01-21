@@ -11856,7 +11856,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-color: #1d2129;
+  background-color: #010100;
   color: #d1d5db;
 }
 
@@ -11880,7 +11880,6 @@ body {
   padding: 2px;
   margin-right: 10px;
   background-image: linear-gradient(to right, #e6a4fd, #fff59f);
-  border-radius: 5px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -11888,7 +11887,6 @@ body {
 .story img {
   width: 58px;
   height: 58px;
-  border-radius: 5px;
 }
 
 .slider-mask {
@@ -11904,11 +11902,11 @@ body {
 }
 .slider-mask::before {
   left: 0;
-  background: linear-gradient(to right, #1d2129, rgba(29, 33, 41, 0));
+  background: linear-gradient(to right, #010100, rgba(1, 1, 0, 0));
 }
 .slider-mask::after {
   right: 0;
-  background: linear-gradient(to left, #1d2129, rgba(29, 33, 41, 0));
+  background: linear-gradient(to left, #010100, rgba(1, 1, 0, 0));
 }
 
 .slider-section .d-flex.overflow-auto::-webkit-scrollbar {
@@ -11919,12 +11917,12 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
-@media (min-width: 992px) {
+@media (min-width: 700px) {
   body {
     padding: 0 50px;
   }
   .max-width-container {
-    max-width: 700px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
   }
