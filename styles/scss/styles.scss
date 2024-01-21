@@ -38,6 +38,30 @@ body {
   }
 }
 
+.slider-mask {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, $primary-bg, rgba($primary-bg, 0));
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, $primary-bg, rgba($primary-bg, 0));
+  }
+}
+
 // To hide the scrollbar
 .slider-section .d-flex.overflow-auto::-webkit-scrollbar {
   display: none;
@@ -45,4 +69,16 @@ body {
 
 .slider-section .d-flex.overflow-auto {
   scrollbar-width: none; /* Firefox */
+}
+
+@media (min-width: 992px) {
+  body {
+    padding: 0 50px;
+  }
+
+  .max-width-container {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
