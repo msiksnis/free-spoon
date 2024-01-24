@@ -6,102 +6,46 @@
     <title>Brag'bout</title>
   </head>
   <body>
-    <nav class="navbar px-3 px-lg-5 align-items-end">
+    <nav class="navbar px-3 px-lg-5">
       <a class="navbar-brand mx-auto" href="#">
-        <img src="assets/images/logo.svg" alt="Logo" />
+        <img src="assets/images/logo.svg" alt="Logo" class="w-auto" />
       </a>
     </nav>
 
-    <!-- slider section -->
-    <div class="">
-      <div class="comtainer slider-section">
-        <div class="d-flex px-3 py-1">
-          <small class="">Top brags</small>
-          <small class="not-active ms-4">Friends' brags</small>
-        </div>
-        <div class="slider-mask">
-          <div class="d-flex overflow-auto px-3">
-            <div class="story rounded">
-              <img
-                src="assets/images/story-1.png"
-                alt="Story"
-                class="rounded"
-              />
-            </div>
-            <div class="story rounded">
-              <img
-                src="assets/images/story-2.png"
-                alt="Story"
-                class="rounded"
-              />
-            </div>
-            <div class="story rounded">
-              <img
-                src="assets/images/story-3.png"
-                alt="Story"
-                class="rounded"
-              />
-            </div>
-            <div class="story rounded">
-              <img
-                src="assets/images/story-4.png"
-                alt="Story"
-                class="rounded"
-              />
-            </div>
-            <div class="story rounded">
-              <img
-                src="assets/images/story-5.png"
-                alt="Story"
-                class="rounded"
-              />
-            </div>
-            <div class="story rounded">
-              <img
-                src="assets/images/story-6.png"
-                alt="Story"
-                class="rounded"
-              />
-            </div>
-            <div class="story rounded">
-              <img
-                src="assets/images/story-7.png"
-                alt="Story"
-                class="rounded"
-              />
-            </div>
-            <div class="story rounded">
-              <img
-                src="assets/images/story-8.png"
-                alt="Story"
-                class="rounded"
-              />
-            </div>
-            <div class="story rounded">
-              <img
-                src="assets/images/story-9.png"
-                alt="Story"
-                class="rounded"
-              />
-            </div>
-            <div class="story rounded">
-              <img
-                src="assets/images/story-10.png"
-                alt="Story"
-                class="rounded"
-              />
+    <!-- Feed section -->
+    <div class="comtainer max-w-md mt-2 mt-md-4 pb-5 mb-4">
+      <div class="d-flex justify-content-around px-5 my-md-2">
+        <div class="text-primary-text">Friends' brags</div>
+        <div class="text-not-active-text">Top brags</div>
+      </div>
+      <script type="text/template" id="image-template">
+        <div class="col-4 col-md-3">
+          <a href="/post">
+          <div class="square-block border border-dark">
+            <img src="IMAGE_SRC" alt="Brag Image" class="aspect-ratio-square w-100" />
+            <div class="d-flex align-items-center justify-content-between px-1">
+                <!-- Here post info will be inserted by JS  -->
+                <p class="fs-sm m-1">
+                  BRAGGER_NAME
+                </p>
+                <p class="fs-xxxs m-1 opacity-75">
+                  TIME_AGO
+                </p>
             </div>
           </div>
+        </a>
         </div>
-        <div class="px-3">
-          <hr />
-        </div>
+      </script>
+
+      <div class="row p-1 g-1" id="image-container">
+        <!-- Images will be inserted here by JS -->
       </div>
     </div>
 
     <!-- Main navbar -->
-    <nav class="container mb-3 fixed-bottom d-md-none">
-      <div class="rounded p-3 secondary-bg">
+    <nav class="fixed-bottom d-md-none bg-black">
+      <hr class="m-0" />
+      <div class="p-3">
         <div class="d-flex justify-content-between">
           <a href="#" class="nav-link">
             <img src="assets/icons/home.svg" alt="Home" class="bar-icon" />
@@ -134,7 +78,7 @@
       </div>
     </nav>
 
-    <nav class="d-none d-md-flex">
+    <!-- <nav class="d-none d-md-flex">
       <div class="rounded p-4 bg-body bg-opacity-10">
         <div class="d-flex flex-column justify-content-between">
           <a href="#" class="nav-link">
@@ -186,6 +130,8 @@
           /></a>
         </div>
       </div>
-    </nav>
+    </nav> -->
+
+    <script type="module" src="js/feed.js"></script>
   </body>
 </html>

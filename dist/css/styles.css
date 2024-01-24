@@ -1,4 +1,68 @@
 @charset "UTF-8";
+.text-blue {
+  color: #5d95e8 !important;
+}
+
+.text-indigo {
+  color: #916fc8 !important;
+}
+
+.text-purple {
+  color: #5d3b9c !important;
+}
+
+.text-pink {
+  color: #ab4578 !important;
+}
+
+.text-red {
+  color: #fa2f44 !important;
+}
+
+.text-orange {
+  color: #ffa053 !important;
+}
+
+.text-yellow {
+  color: #ffdf7e !important;
+}
+
+.text-green {
+  color: #4fe49e !important;
+}
+
+.text-teal {
+  color: #9fffe2 !important;
+}
+
+.text-cyan {
+  color: #8eecff !important;
+}
+
+.text-primary-bg {
+  color: #010100 !important;
+}
+
+.text-secondary-bg {
+  color: #111111 !important;
+}
+
+.text-primary-text {
+  color: #d1d5db !important;
+}
+
+.text-secondary-text {
+  color: #9ca3af !important;
+}
+
+.text-not-active-text {
+  color: rgba(209, 213, 219, 0.2823529412) !important;
+}
+
+.text-gradient-border {
+  color: linear-gradient(to right, #e6a4fd, #fff59f) !important;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -16,10 +80,12 @@
   --bs-green: #4fe49e;
   --bs-teal: #9fffe2;
   --bs-cyan: #8eecff;
-  --bs-black: #000;
-  --bs-white: #fff;
-  --bs-gray: #6c757d;
-  --bs-gray-dark: #343a40;
+  --bs-primary-bg: #010100;
+  --bs-secondary-bg: #111111;
+  --bs-primary-text: #d1d5db;
+  --bs-secondary-text: #9ca3af;
+  --bs-not-active-text: rgba(209, 213, 219, 0.2823529412);
+  --bs-gradient-border: linear-gradient(to right, #e6a4fd, #fff59f);
   --bs-gray-100: #f8f9fa;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
@@ -8244,28 +8310,52 @@ textarea.form-control-lg {
   font-family: var(--bs-font-monospace) !important;
 }
 
-.fs-1 {
-  font-size: calc(1.375rem + 1.5vw) !important;
+.fs-xxxs {
+  font-size: 0.5rem !important;
 }
 
-.fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
+.fs-xxs {
+  font-size: 0.625rem !important;
 }
 
-.fs-3 {
-  font-size: calc(1.3rem + 0.6vw) !important;
+.fs-xs {
+  font-size: 0.75rem !important;
 }
 
-.fs-4 {
-  font-size: calc(1.275rem + 0.3vw) !important;
+.fs-sm {
+  font-size: 0.875rem !important;
 }
 
-.fs-5 {
+.fs-base {
+  font-size: 1rem !important;
+}
+
+.fs-lg {
+  font-size: 1.125rem !important;
+}
+
+.fs-xl {
   font-size: 1.25rem !important;
 }
 
-.fs-6 {
-  font-size: 1rem !important;
+.fs-2xl {
+  font-size: calc(1.275rem + 0.3vw) !important;
+}
+
+.fs-3xl {
+  font-size: calc(1.3125rem + 0.75vw) !important;
+}
+
+.fs-4xl {
+  font-size: calc(1.35rem + 1.2vw) !important;
+}
+
+.fs-5xl {
+  font-size: calc(1.425rem + 2.1vw) !important;
+}
+
+.fs-6xl {
+  font-size: calc(1.525rem + 3.3vw) !important;
 }
 
 .fst-italic {
@@ -11807,17 +11897,20 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 1200px) {
-  .fs-1 {
-    font-size: 2.5rem !important;
-  }
-  .fs-2 {
-    font-size: 2rem !important;
-  }
-  .fs-3 {
-    font-size: 1.75rem !important;
-  }
-  .fs-4 {
+  .fs-2xl {
     font-size: 1.5rem !important;
+  }
+  .fs-3xl {
+    font-size: 1.875rem !important;
+  }
+  .fs-4xl {
+    font-size: 2.25rem !important;
+  }
+  .fs-5xl {
+    font-size: 3rem !important;
+  }
+  .fs-6xl {
+    font-size: 4rem !important;
   }
 }
 @media print {
@@ -11860,53 +11953,22 @@ body {
   color: #d1d5db;
 }
 
-.navbar-brand img {
-  height: 35px;
-  width: auto;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.not-active {
-  color: rgba(209, 213, 219, 0.2823529412);
+.navbar-brand img {
+  height: 40px;
+}
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 50px;
+  }
 }
 
 .bar-icon {
   height: 25px;
-  width: auto;
-}
-
-.story {
-  width: 60px;
-  height: 60px;
-  padding: 2px;
-  margin-right: 10px;
-  background-image: linear-gradient(to right, #e6a4fd, #fff59f);
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.story img {
-  width: 58px;
-  height: 58px;
-}
-
-.slider-mask {
-  position: relative;
-}
-.slider-mask::before, .slider-mask::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 20px;
-  pointer-events: none;
-}
-.slider-mask::before {
-  left: 0;
-  background: linear-gradient(to right, #010100, rgba(1, 1, 0, 0));
-}
-.slider-mask::after {
-  right: 0;
-  background: linear-gradient(to left, #010100, rgba(1, 1, 0, 0));
 }
 
 .slider-section .d-flex.overflow-auto::-webkit-scrollbar {
@@ -11921,15 +11983,15 @@ body {
   background-color: #111111;
 }
 
-@media (min-width: 700px) {
-  body {
-    padding: 0 50px;
-  }
-  .max-width-container {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.max-w-md {
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */
